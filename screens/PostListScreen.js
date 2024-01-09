@@ -7,8 +7,8 @@ const { format } = require('date-fns');
 
 const PostListScreen = ({route }) => {
   const navigation = useNavigation();
- //const userEmail = route.params?.userEmail || '';
-  const userEmail = "hoa@gmail.com";
+ const userEmail = route.params?.userEmail || '';
+  //const userEmail = "hoa@gmail.com";
   const [hoten, sethoten] = useState("");
   const [selecetedAvatar, setSelectedAvatar] = useState(null);
   const [friendPosts, setFriendPosts] = useState([]);

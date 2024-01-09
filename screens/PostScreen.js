@@ -118,6 +118,7 @@ const CreatePostScreen = ({ route }) => {
       avatar:selectedAvatar,
     });
     console.log("Đăng bài thành công");
+    
     const id_docComment = `${userEmail}_${timestamp_post}`;
     const userDocumentComment = doc(collection(database, 'port_comments'), id_docComment);
     const userChatsCollectionRef = collection(userDocumentComment, 'comments');

@@ -119,9 +119,17 @@ const EditProfile = ({ route }) => {
     }
    
     try {
-
-      const avatarUrl = await uploadImageAvatar(selectedImageUri);
-      const backgroundUrl = await uploadImageBackground(selectedImageUriBackground);
+      const avatarUrl = "";
+      const backgroundUrl = "";
+      if(selectedImageUri)
+      {
+        avatarUrl = await uploadImageAvatar(selectedImageUri);
+      }
+      if(selectedImageUriBackground)
+      {
+        backgroundUrl= await uploadImageBackground(selectedImageUriBackground);
+      }
+      
 
       userProfile.email = email;
       userProfile.hoten = hoten;
